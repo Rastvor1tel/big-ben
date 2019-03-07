@@ -1,0 +1,48 @@
+.content {
+  & .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-text {
+    flex-basis: 735px;
+    margin-top: 190px;
+    &__title {
+      color: #080808;
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 60px;
+      margin-bottom: 70px;
+    }
+
+    &__text {
+      color: #080808;
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 300;
+      margin-bottom: 100px;
+      & b {
+        font-weight: bold;
+      }
+    }
+
+    &__callback {
+      color: #ff0000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 1.8px;
+    }
+  }
+  &-image {
+    flex-basis: 640px;
+    margin-top: 120px;
+    height: 540px;
+    z-index: 2;
+    & img {
+      position: absolute;
+      height: 100%;
+      widows: auto;
+      max-width: none;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+header {
+  & .container {
+    border-bottom: $border;
+    border-left: $border;
+    padding: 50px 0;
+  }
+}
+
+.header {
+  height: 120px;
+  &__logo {
+    position: absolute;
+    top: 15px;
+    left: -8%;
+  }
+  &__title {
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &-contacts {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 50%;
+    border-bottom: $border;
+    &__item{
+      flex-grow: 1;
+      padding: 50px 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000000;
+      border-left: $border;
+      &-bg {
+        text-align: center;
+        background: url('/assets/images/svg/Pattern.svg');
+        background-size: 1000px;
+        background-position: center;
+        color: #ff0000;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+}

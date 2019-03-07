@@ -1,0 +1,39 @@
+.banner {
+  border-bottom: $border;
+  & .container {
+    display: flex;
+  }
+  &__block {
+    width: 50%;
+    overflow: hidden;
+    &__title {
+      color: #00247d;
+      font-size: 71px;
+      font-weight: 300;
+      margin: 50px 0 60px;
+      line-height: 90px;
+    }
+    &__text {
+      color: #080808;
+      max-width: 615px;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 70px;
+      line-height: 36px;
+    }
+    &__aditional {
+      color: #ff0000;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 1.8px;
+    }
+    &._left {
+      padding: 55px 0;
+    }
+    &._right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}
