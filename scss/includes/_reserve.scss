@@ -5,6 +5,7 @@
       display: flex;
     }
     &__input {
+      flex-basis: 20%;
       flex-grow: 1;
       & input {
         border: none;
@@ -20,7 +21,8 @@
       }
     }
     &__submit {
-      flex-grow: 4;
+      flex-basis: 40%;
+      flex-grow: 2;
       z-index: 2;
       & input {
         width: 100%;
@@ -33,6 +35,7 @@
         line-height: 48px;
         text-transform: uppercase;
         font-family: Lato;
+        cursor: pointer;
       }
     }
     &-privacy {

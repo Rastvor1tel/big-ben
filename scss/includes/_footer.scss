@@ -1,0 +1,26 @@
+.footer {
+  & .container {
+    display: flex;
+  }
+  &__item {
+    color: #080808;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 50px 0;
+  }
+  &__copyright {
+    flex-basis: 40%;
+    flex-grow: 2;
+  }
+  &__ogrn {
+    flex-basis: 20%;
+    flex-grow: 1;
+  }
+  &__policy {
+    flex-basis: 40%;
+    flex-grow: 2;
+    & a {
+      color: #080808;
+    }
+  }
+}

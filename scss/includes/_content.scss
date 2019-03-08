@@ -2,10 +2,11 @@
   & .container {
     display: flex;
     justify-content: space-between;
+    padding: 120px 0;
   }
   &-text {
     flex-basis: 735px;
-    margin-top: 190px;
+    margin-top: 70px;
     &__title {
       color: #080808;
       font-size: 48px;
@@ -35,7 +36,6 @@
   }
   &-image {
     flex-basis: 640px;
-    margin-top: 120px;
     height: 540px;
     z-index: 2;
     & img {

@@ -11,7 +11,7 @@ header {
   &__logo {
     position: absolute;
     top: 15px;
-    left: -8%;
+    left: -7.5%;
   }
   &__title {
     color: #ff0000;
@@ -34,12 +34,16 @@ header {
       border-left: $border;
       &-bg {
         text-align: center;
-        background: url('/assets/images/svg/Pattern.svg');
-        background-size: 1000px;
-        background-position: center;
         color: #ff0000;
         font-size: 18px;
         cursor: pointer;
+        overflow: hidden;
+        & svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          fill: #e7e7e7;
+        }
       }
     }
   }

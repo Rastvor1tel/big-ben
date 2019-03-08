@@ -1,0 +1,76 @@
+.service {
+  border-bottom: $border;
+  & .container {
+    padding: 120px 0 60px;
+  }
+  &-row {
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    &__item {
+      padding: 50px;
+      z-index: 2;
+      background: #00237b;
+      background: -moz-linear-gradient(top, #00237b 0%, #001a68 100%);
+      background: -webkit-linear-gradient(top, #00237b 0%,#001a68 100%);
+      background: linear-gradient(to bottom, #00237b 0%,#001a68 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00237b', endColorstr='#001a68',GradientType=0 );
+      &-title {
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 300;
+        margin-bottom: 45px;
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+        height: 105px;
+        overflow: hidden;
+        &__item {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__about {
+      flex-basis: 40%;
+      z-index: 2;
+      &-title {
+        color: #080808;
+        font-size: 48px;
+        font-weight: 300;
+        margin-bottom: 60px;
+      }
+      &-text {
+        color: #080808;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    &__entertainment {
+      flex-basis: 40%;
+      background: url(/assets/images/entertainment-bg.jpg);
+    }
+    &__art {
+      flex-basis: 60%;
+      background: url(/assets/images/art-bg.jpg);
+    }
+    &__wave {
+      flex-basis: 20%;
+      height: 300px;
+      overflow: hidden;
+      padding: 0;
+      background: none;
+      & svg {
+        fill: #e7e7e7;
+      }
+    }
+    &__sport {
+      flex-basis: 60%;
+      margin: 0 10% 0 30%;
+      background: url(/assets/images/sport-bg.jpg);
+    }
+  }
+}

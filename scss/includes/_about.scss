@@ -1,7 +1,21 @@
 .about {
+  &::before {
+    content: '';
+    position: absolute;
+    background: url(/assets/images/svg/pattern-side__gray.svg);
+    background-size: 160%;
+    background-position: center;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    height: 300px;
+  }
+  border-bottom: $border;
   & .container {
     display: flex;
     justify-content: space-between;
+    padding: 120px 0;
+    background: #ffffff;
   }
   &-block {
     width: 50%;

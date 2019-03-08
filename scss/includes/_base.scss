@@ -42,8 +42,6 @@ body {
   z-index: 1;
   & span {
     flex-grow: 1;
-    padding: 25px 0;
-    border-right: 1px solid #cacaca;
-    opacity: 0.3;
+    border-right: 1px solid #e7e7e7;
   }
 }
