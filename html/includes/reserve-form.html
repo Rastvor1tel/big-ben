@@ -10,17 +10,20 @@
             <div class="reserve-form__input">
                 <input type="text" name="name" value="" placeholder="Ваше имя">
             </div>
-            <div class="reserve-form__submit">
-                <input type="submit" name="submit" value="Забронировать сейчас">
-            </div>
+            <button type="submit" class="reserve-form__submit">
+                <span>Забронировать сейчас</span>
+                <svg viewBox="0 0 71 18">
+                    <use xlink:href="/assets/images/svg/sprite.svg#callback-arrow"/>
+                </svg>
+            </button>
         </div>
         <div class="reserve-form__row">
             <label class="reserve-form-privacy reserve-form-privacy_black">
-                <input type="checkbox" name="privacy" required="" class="reserve-form-privacy__checkbox">
+                <input type="checkbox" name="privacy" required="required" class="reserve-form-privacy__checkbox">
                 <span class="reserve-form-privacy__span"></span>
                 <span class="reserve-form-privacy__text">
-                            Согласие на обработку <a href="#">персональных данных</a>
-                        </span>
+                    Согласие на обработку <a href="#">персональных данных</a>
+                </span>
             </label>
         </div>
     </form>

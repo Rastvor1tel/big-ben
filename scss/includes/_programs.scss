@@ -22,7 +22,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 320px;
+    width: 20%;
     height: 240px;
     overflow: hidden;
     & svg {
@@ -43,11 +43,22 @@
         border: none;
       }
     }
+    @include adaptive(1024) {
+      display: none;
+    }
   }
   &-content {
     width: 60%;
     margin: 0 20%;
     padding-top: 145px;
+    @include adaptive(1440) {
+      width: 80%;
+      margin: 0 0 0 20%;
+    }
+    @include adaptive(768) {
+      width: 100%;
+      margin: 0;
+    }
     &__title {
       font-size: 48px;
       font-weight: 300;
@@ -65,10 +76,20 @@
       top: -3px;
       left: -49%;
       z-index: 2;
+      @include adaptive(1024) {
+        display: none;
+      }
     }
   }
   &-list {
     display: flex;
+    @include adaptive(875) {
+      flex-wrap: wrap;
+    }
+    @include adaptive(425) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
     &__item {
       $parent: &;
       $padding: 0 20px;
@@ -78,11 +99,11 @@
       padding: 20px 0;
       height: 420px;
       transition: $transition;
-      background: #00237b;
-      background: -moz-linear-gradient(top, #00237b 0%, #001a68 100%);
-      background: -webkit-linear-gradient(top, #00237b 0%,#001a68 100%);
-      background: linear-gradient(to bottom, #00237b 0%,#001a68 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00237b', endColorstr='#001a68',GradientType=0 );
+      background: #00247d;
+      background: -moz-linear-gradient(top, #00247d 0%, #001a68 100%);
+      background: -webkit-linear-gradient(top, #00247d 0%,#001a68 100%);
+      background: linear-gradient(to bottom, #00247d 0%,#001a68 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00247d', endColorstr='#001a68',GradientType=0 );
       &-number {
         font-size: 48px;
         font-weight: 300;
@@ -95,6 +116,9 @@
         letter-spacing: 0.17px;
         margin-bottom: 20px;
         padding: $padding;
+        @include adaptive(1024) {
+          font-size: 24px;
+        }
       }
       &-text, &-price {
         font-size: 18px;
@@ -103,18 +127,31 @@
         padding: $padding;
         overflow: hidden;
         transition: $transition;
+        @include adaptive(1024) {
+          font-size: 16px;
+        }
       }
       &-text {
         height: 22px;
         margin-bottom: 40px;
         opacity: 1;
+        @include adaptive(1024) {
+          margin-bottom: 0;
+          height: 40px;
+        }
       }
       &-price {
         height: 0;
         margin-bottom: 0;
         opacity: 0;
+        @include adaptive(1440) {
+          & span:first-child {
+            display: none;
+          }
+        }
       }
       &-buy {
+        display: flex;
         height: 0;
         padding: 0 30px;
         background-color: #ff0000;
@@ -126,6 +163,16 @@
         overflow: hidden;
         cursor: pointer;
         transition: $transition;
+        & span {
+          margin-right: 25px;
+        }
+        & svg {
+          width: 71px;
+          stroke: #ffffff;
+          @include adaptive(1440) {
+            display: none;
+          }
+        }
       }
       &-days {
         font-size: 18px;
@@ -152,11 +199,17 @@
           height: 22px;
           opacity: 1;
           margin-bottom: 40px;
+          @include adaptive(1024) {
+            margin-bottom: 0;
+          }
         }
         & #{$parent}-buy {
           margin: 40px 0 20px;
           padding: 20px 30px;
           height: 76px;
+          @include adaptive(1024) {
+            margin: 20px 0 20px;
+          }
         }
       }
     }

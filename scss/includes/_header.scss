@@ -1,17 +1,34 @@
 header {
+  height: 120px;
+  @include adaptive(768) {
+    height: auto;
+  }
   & .container {
+    height: 120px;
+    display: flex;
+    align-items: center;
     border-bottom: $border;
     border-left: $border;
-    padding: 50px 0;
+    @include adaptive(768) {
+      justify-content: space-around;
+    }
   }
 }
-
 .header {
-  height: 120px;
   &__logo {
     position: absolute;
     top: 15px;
     left: -7.5%;
+    @include adaptive(1900) {
+      position: static;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      & img {
+        max-height: 75%;
+      }
+    }
   }
   &__title {
     color: #ff0000;
@@ -20,29 +37,51 @@ header {
   }
   &-contacts {
     position: absolute;
+    height: 120px;
     top: 0;
     right: 0;
     display: flex;
     width: 50%;
     border-bottom: $border;
+    @include adaptive(1600) {
+      width: 60%;
+    }
+    @include adaptive(768) {
+      position: static;
+      width: 100%;
+    }
     &__item{
       flex-grow: 1;
-      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      height: 100%;
       font-size: 18px;
       font-weight: 400;
       color: #000000;
       border-left: $border;
+      @include adaptive(768) {
+        justify-content: center;
+      }
       &-bg {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         color: #ff0000;
         font-size: 18px;
         cursor: pointer;
         overflow: hidden;
+        transition: 0.3s all;
         & svg {
           position: absolute;
           top: 0;
           left: 0;
           fill: #e7e7e7;
+        }
+        &:hover {
+          background: #00247d;
+          color: #ffffff;
+          & svg {
+            display: none;
+          }
         }
       }
     }

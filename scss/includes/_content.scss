@@ -3,29 +3,48 @@
     display: flex;
     justify-content: space-between;
     padding: 120px 0;
+    @include adaptive(768) {
+      flex-direction: column;
+      padding: 60px 0 0;
+    }
   }
   &-text {
     flex-basis: 735px;
     margin-top: 70px;
+    @include adaptive(1600) {
+      margin-top: 0;
+    }
+    @include adaptive(1440) {
+      flex-basis: 60%;
+    }
+    @include adaptive(1024) {
+      flex-basis: 50%;
+    }
     &__title {
       color: #080808;
       font-size: 48px;
       font-weight: 300;
       line-height: 60px;
       margin-bottom: 70px;
+      @include adaptive(1024) {
+        font-size: 30px;
+        line-height: normal;
+        margin-bottom: 30px;
+      }
     }
-
     &__text {
       color: #080808;
       font-size: 16px;
       line-height: 30px;
       font-weight: 300;
       margin-bottom: 100px;
+      @include adaptive(1024) {
+        margin-bottom: 30px;
+      }
       & b {
         font-weight: bold;
       }
     }
-
     &__callback {
       color: #ff0000;
       font-size: 18px;
@@ -35,14 +54,27 @@
     }
   }
   &-image {
-    flex-basis: 640px;
+    flex-basis: 40%;
     height: 540px;
     z-index: 2;
+    @include adaptive(1024) {
+      flex-basis: 50%;
+    }
+    @include adaptive(768) {
+      height: auto;
+      margin-top: 20px;
+    }
     & img {
       position: absolute;
+      display: block;
       height: 100%;
-      widows: auto;
+      width: auto;
       max-width: none;
+      @include adaptive(1600) {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

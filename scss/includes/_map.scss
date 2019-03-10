@@ -1,0 +1,27 @@
+.map {
+  &-block {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 2;
+    width: 40%;
+    height: 480px;
+    padding: 100px 40px 20px 60px;
+    background: #ffffff;
+    color: #080808;
+    font-weight: 400;
+    font-size: 18px;
+    &__item {
+      margin-bottom: 40px;
+      & span {
+        color: #ff000b;
+      }
+    }
+  }
+  & .callback {
+    margin: 100px 0 40px;
+  }
+}
+.ymaps-2-1-73-controls-pane, .ymaps-2-1-73-copyrights-pane {
+  display: none;
+}
