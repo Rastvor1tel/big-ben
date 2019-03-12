@@ -1,4 +1,5 @@
 $(function () {
+    svg4everybody();
     var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         navigation: {
@@ -16,27 +17,27 @@ $(function () {
         $('.overlay').fadeOut();
     });
     $('.callback-form form').submit(function(){
+        var container = $(this).parents('.callback-form__wrapper');
         $.ajax({
             url: "/assets/ajax-mail.php",
             type: 'POST',
             dataType: 'html',
             data: $(this).serialize(),
-            context: document.body,
             success: function(result){
-                $(this).parents('.callback-form__wrapper').html(result);
+                container.html('<div class="thank-text">'+result+'</div>');
             }
         });
         return false;
     });
     $('.reserve-form form').submit(function(){
+        var container = $(this).parents('.reserve-form');
         $.ajax({
             url: "/assets/ajax-mail.php",
             type: 'POST',
             dataType: 'html',
             data: $(this).serialize(),
-            context: document.body,
             success: function(result){
-                $(this).parents('.reserve-form').html(result);
+                container.html('<div class="thank-text">'+result+'</div>');
             }
         });
         return false;

@@ -13,8 +13,9 @@ img {
 *:before {
   box-sizing: border-box;
 }
-*{
-  position:relative;
+
+* {
+  position: relative;
 }
 
 body {
@@ -31,6 +32,13 @@ body {
   border-left: $border;
 }
 
+.thank-text {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
 .lattice {
   display: flex;
   position: absolute;
@@ -40,10 +48,12 @@ body {
   bottom: 0;
   pointer-events: none;
   z-index: 1;
+
   & span {
     flex-grow: 1;
     border-right: 1px solid #e7e7e7;
   }
+
   @include adaptive(768) {
     display: none;
   }
@@ -52,6 +62,7 @@ body {
 .social-block {
   &__item {
     text-decoration: none;
+
     & svg {
       width: 35px;
       height: 35px;
@@ -59,6 +70,7 @@ body {
       fill: #c3c3c3;
       transition: 0.3s;
     }
+
     &:hover {
       & svg {
         fill: #ff0000;
@@ -76,6 +88,7 @@ body {
   color: $color;
   cursor: pointer;
   transition: 0.3s all;
+
   & span {
     display: block;
     margin-right: 25px;
@@ -83,12 +96,15 @@ body {
     font-weight: 400;
     letter-spacing: 1.8px;
   }
+
   & svg {
     width: 71px;
     stroke: $color
   }
+
   &:hover {
     color: $color-hover;
+
     & svg {
       stroke: $color-hover;
     }
