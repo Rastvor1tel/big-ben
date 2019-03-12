@@ -50,6 +50,9 @@ header {
       position: static;
       width: 100%;
     }
+    @include adaptive(425) {
+      flex-direction: column;
+    }
     &__item{
       flex-grow: 1;
       display: flex;

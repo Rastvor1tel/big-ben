@@ -1,0 +1,39 @@
+<div class="callback-form">
+    <div class="callback-form__close close-button">
+        <svg viewBox="0 0 15 15">
+            <use xlink:href="/assets/images/svg/sprite.svg#close"/>
+        </svg>
+    </div>
+    <div class="callback-form__wrapper">
+        <form action="/" method="POST">
+            <div class="callback-form__top-block">
+                <div class="callback-form__row">
+                    <div class="callback-form__title">Заказть звонок</div>
+                    <div class="callback-form__input">
+                        <input type="text" name="phone" value="" placeholder="+7(___)___-__-__">
+                    </div>
+                    <div class="callback-form__input">
+                        <input type="text" name="email" value="" placeholder="Ваш E-mail">
+                    </div>
+                    <div class="callback-form__input">
+                        <input type="text" name="name" value="" placeholder="Ваше имя">
+                    </div>
+                    <label class="callback-form-privacy callback-form-privacy_black">
+                        <input type="checkbox" name="privacy" required="required" class="callback-form-privacy__checkbox">
+                        <span class="callback-form-privacy__span"></span>
+                        <span class="callback-form-privacy__text">
+                            Согласие на обработку <a href="/assets/policy.pdf" target="_blank">персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="callback-form__submit">
+                <span>Забронировать сейчас</span>
+                <svg viewBox="0 0 71 18">
+                    <use xlink:href="/assets/images/svg/sprite.svg#callback-arrow"/>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="overlay"></div>

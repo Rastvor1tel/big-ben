@@ -5,14 +5,32 @@
   &-content {
     display: flex;
     justify-content: space-between;
+    @include adaptive(1024) {
+      flex-direction: column;
+      align-items: center;
+    }
     &__block {
       flex-basis: 60%;
       flex-grow: 1;
+      @include adaptive(1024) {
+        width: 60%;
+        margin-bottom: 40px;
+      }
+      @include adaptive(768) {
+        width: 80%;
+      }
       &-title {
         color: #080808;
         font-size: 48px;
         font-weight: 300;
         margin-bottom: 75px;
+        @include adaptive(768) {
+          font-size: 40px;
+          margin-bottom: 40px;
+        }
+        @include adaptive(425) {
+          font-size: 30px;
+        }
       }
       &-list {
         &__item {
@@ -20,6 +38,12 @@
           font-size: 36px;
           font-weight: 300;
           margin-bottom: 15px;
+          @include adaptive(768) {
+            font-size: 30px;
+          }
+          @include adaptive(425) {
+            font-size: 24px;
+          }
         }
       }
       &-slogan {
@@ -34,6 +58,13 @@
       flex-basis: 40%;
       flex-grow: 1;
       z-index: 2;
+      @include adaptive(1024) {
+        width: 60%;
+        margin-bottom: 40px;
+      }
+      @include adaptive(768) {
+        width: 80%;
+      }
       & img {
         max-width: 100%;
         display: block;

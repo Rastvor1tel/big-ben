@@ -11,6 +11,14 @@
     color: #080808;
     font-weight: 400;
     font-size: 18px;
+    @include adaptive(1600) {
+      padding: 40px;
+      height: auto;
+    }
+    @include adaptive(768) {
+      position: static;
+      width: 100%;
+    }
     &__item {
       margin-bottom: 40px;
       & span {
