@@ -6,6 +6,7 @@ $(function () {
             prevEl: '.about-slider__arrows-item.left',
         },
     })
+    $(".input-phone").inputmask("+7 (999) 999-99-99");
     $('.callback-button').click(function(){
         $('.callback-form').fadeIn();
         $('.overlay').fadeIn();
@@ -22,10 +23,22 @@ $(function () {
             data: $(this).serialize(),
             context: document.body,
             success: function(result){
-                console.log(result);
+                $(this).parents('.callback-form__wrapper').html(result);
             }
         });
-
+        return false;
+    });
+    $('.reserve-form form').submit(function(){
+        $.ajax({
+            url: "/assets/ajax-mail.php",
+            type: 'POST',
+            dataType: 'html',
+            data: $(this).serialize(),
+            context: document.body,
+            success: function(result){
+                $(this).parents('.reserve-form').html(result);
+            }
+        });
         return false;
     });
 })
